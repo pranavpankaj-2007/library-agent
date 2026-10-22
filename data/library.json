@@ -1,0 +1,85 @@
+
+{
+  "accounts": [
+    {
+      "id": "DEMO001",
+      "display_name": "Sample Student"
+    },
+    {
+      "id": "DEMO002",
+      "display_name": "Test Student"
+    }
+  ],
+  "loans": [
+    {
+      "id": "LOAN001",
+      "account_id": "DEMO001",
+      "title": "Database System Concepts",
+      "author": "Abraham Silberschatz",
+      "edition": "7th Edition",
+      "due_date": "2026-10-19",
+      "renewals_used": 0,
+      "renewal_limit": 2,
+      "reserved_by_other": false,
+      "renewal_allowed": true
+    },
+    {
+      "id": "LOAN002",
+      "account_id": "DEMO001",
+      "title": "Computer Networks",
+      "author": "Andrew S. Tanenbaum",
+      "edition": "6th Edition",
+      "due_date": "2026-10-19",
+      "renewals_used": 1,
+      "renewal_limit": 2,
+      "reserved_by_other": false,
+      "renewal_allowed": true
+    },
+    {
+      "id": "LOAN003",
+      "account_id": "DEMO002",
+      "title": "Database System Concepts",
+      "author": "Abraham Silberschatz",
+      "edition": "6th Edition",
+      "due_date": "2026-10-22",
+      "renewals_used": 2,
+      "renewal_limit": 2,
+      "reserved_by_other": false,
+      "renewal_allowed": false
+    }
+  ],
+  "catalogue": [
+    {
+      "id": "BOOK001",
+      "title": "Database System Concepts",
+      "author": "Abraham Silberschatz",
+      "edition": "7th Edition",
+      "year": 2019,
+      "isbn": "9780078022159"
+    },
+    {
+      "id": "BOOK002",
+      "title": "Database System Concepts",
+      "author": "Abraham Silberschatz",
+      "edition": "6th Edition",
+      "year": 2010,
+      "isbn": "9780073523323"
+    },
+    {
+      "id": "BOOK003",
+      "title": "Fundamentals of Database Systems",
+      "author": "Ramez Elmasri",
+      "edition": "7th Edition",
+      "year": 2015,
+      "isbn": "9780133970777"
+    },
+    {
+      "id": "BOOK004",
+      "title": "Computer Networks",
+      "author": "Andrew S. Tanenbaum",
+      "edition": "6th Edition",
+      "year": 2021,
+      "isbn": "9780137523214"
+    }
+  ]
+}

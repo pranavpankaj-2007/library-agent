@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Hold & Renewal Agent</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">L</div>
+    <div>
+      <h1>Library Agent</h1>
+      <p>Voice-powered library assistant</p>
+    </div>
+    <span id="connection" class="pill">Connecting...</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">YOUR SMART LIBRARY ASSISTANT</span>
+      <h2>What can I help you find?</h2>
+      <p>Request a renewal or reserve a book in plain English.</p>
+
+      <label for="account">Sample library account</label>
+      <select id="account">
+        <option value="DEMO001">DEMO001 — Sample Student</option>
+        <option value="DEMO002">DEMO002 — Test Student</option>
+      </select>
+
+      <label for="request">Your request</label>
+      <textarea id="request" rows="3"
+        placeholder="Renew my library books and reserve the DBMS textbook"></textarea>
+
+      <div class="actions">
+        <button id="voiceBtn" class="secondary" type="button">
+          🎙 Speak
+        </button>
+        <button id="previewBtn" type="button">
+          Preview request →
+        </button>
+      </div>
+      <p id="voiceStatus" class="muted" aria-live="polite">
+        You can type instead of speaking.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <h2>Request preview</h2>
+          <p>Nothing changes in the library during this phase.</p>
+        </div>
+        <span class="pill warning">Preview only</span>
+      </div>
+      <div id="preview" class="panel empty" aria-live="polite">
+        Your proposed actions will appear here.
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <h2>Catalogue search</h2>
+          <p>Sample editions plus optional live OPAC results.</p>
+        </div>
+      </div>
+      <div class="search-row">
+        <input id="catalogQuery" type="text" value="Database"
+          placeholder="Search for a book">
+        <button id="searchBtn" type="button">Search</button>
+      </div>
+      <div id="catalogResults" class="panel empty">
+        Search for a title to view matching editions.
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <h2>Sample loans</h2>
+          <p>Fictional records for development and testing.</p>
+        </div>
+      </div>
+      <div id="loans" class="panel empty">Loading sample loans...</div>
+    </section>
+  </main>
+
+  <footer>
+    Demo mode · Synthetic data · No real library actions executed
+  </footer>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
